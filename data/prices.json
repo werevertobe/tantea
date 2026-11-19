@@ -1,9 +1,9 @@
 {
- "updated": 1795053600000,
- "health_alerted": false,
+ "updated": 1795065322382,
+ "health_alerted": true,
  "products": {
   "b1": {
-   "ok": true,
+   "ok": false,
    "price": 459990,
    "was": 779990,
    "last_ok": 1795053600000,
@@ -14,13 +14,14 @@
      779990
     ]
    ],
-   "alert": null
+   "alert": null,
+   "error": "HTTP 403"
   },
   "b2": {
    "ok": true,
    "price": 626990,
    "was": 845990,
-   "last_ok": 1795053600000,
+   "last_ok": 1795065004685,
    "history": [
     [
      1795053600000,
@@ -28,7 +29,8 @@
      845990
     ]
    ],
-   "alert": null
+   "alert": null,
+   "error": null
   },
   "b3": {
    "ok": false,
@@ -37,7 +39,7 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   },
   "b4": {
    "ok": false,
@@ -46,10 +48,10 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   },
   "j1": {
-   "ok": true,
+   "ok": false,
    "price": 145990,
    "was": 159990,
    "last_ok": 1795053600000,
@@ -60,7 +62,8 @@
      159990
     ]
    ],
-   "alert": null
+   "alert": null,
+   "error": "HTTP 403"
   },
   "j2": {
    "ok": false,
@@ -69,7 +72,7 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   },
   "j3": {
    "ok": false,
@@ -78,10 +81,10 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "no encontré el precio en la página"
   },
   "j4": {
-   "ok": true,
+   "ok": false,
    "price": 129990,
    "was": 229990,
    "last_ok": 1795053600000,
@@ -92,10 +95,11 @@
      229990
     ]
    ],
-   "alert": null
+   "alert": null,
+   "error": "HTTP 403"
   },
   "s1": {
-   "ok": true,
+   "ok": false,
    "price": 60990,
    "was": 129990,
    "last_ok": 1795053600000,
@@ -106,10 +110,11 @@
      129990
     ]
    ],
-   "alert": null
+   "alert": null,
+   "error": "HTTP 403"
   },
   "s2": {
-   "ok": true,
+   "ok": false,
    "price": 31990,
    "was": 59990,
    "last_ok": 1795053600000,
@@ -120,7 +125,8 @@
      59990
     ]
    ],
-   "alert": null
+   "alert": null,
+   "error": "HTTP 403"
   },
   "s3": {
    "ok": false,
@@ -129,16 +135,22 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   },
   "s4": {
-   "ok": false,
-   "price": null,
-   "was": null,
-   "last_ok": null,
-   "history": [],
+   "ok": true,
+   "price": 105990,
+   "was": 161990,
+   "last_ok": 1795065155720,
+   "history": [
+    [
+     1795065155720,
+     105990,
+     161990
+    ]
+   ],
    "alert": null,
-   "error": "aún no revisado"
+   "error": null
   },
   "s5": {
    "ok": false,
@@ -147,7 +159,7 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   },
   "a1": {
    "ok": false,
@@ -156,7 +168,7 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   },
   "a2": {
    "ok": false,
@@ -165,7 +177,7 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   },
   "a3": {
    "ok": false,
@@ -174,7 +186,7 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   },
   "n1": {
    "ok": false,
@@ -183,7 +195,7 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   },
   "n2": {
    "ok": false,
@@ -192,7 +204,7 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   },
   "n3": {
    "ok": false,
@@ -201,7 +213,7 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   },
   "n4": {
    "ok": false,
@@ -210,7 +222,7 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   },
   "n5": {
    "ok": false,
@@ -219,7 +231,7 @@
    "last_ok": null,
    "history": [],
    "alert": null,
-   "error": "aún no revisado"
+   "error": "HTTP 403"
   }
  }
 }
