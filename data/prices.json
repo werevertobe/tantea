@@ -1,9 +1,9 @@
 {
- "updated": 1795104338059,
- "health_alerted": false,
+ "updated": 1795108600747,
+ "health_alerted": true,
  "products": {
   "b1": {
-   "ok": true,
+   "ok": false,
    "price": 479990,
    "was": 779990,
    "last_ok": 1795104216011,
@@ -20,13 +20,13 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "b2": {
    "ok": true,
    "price": 516990,
    "was": 697990,
-   "last_ok": 1795104220540,
+   "last_ok": 1795108284509,
    "history": [
     [
      1795053600000,
@@ -43,7 +43,7 @@
    "error": null
   },
   "b3": {
-   "ok": true,
+   "ok": false,
    "price": 249990,
    "was": 399990,
    "last_ok": 1795104225346,
@@ -55,7 +55,7 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "b4": {
    "ok": false,
@@ -67,7 +67,7 @@
    "error": "HTTP 403"
   },
   "j1": {
-   "ok": true,
+   "ok": false,
    "price": 159990,
    "was": null,
    "last_ok": 1795104248203,
@@ -84,10 +84,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "j2": {
-   "ok": true,
+   "ok": false,
    "price": 179990,
    "was": null,
    "last_ok": 1795104252551,
@@ -99,7 +99,7 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "j3": {
    "ok": false,
@@ -111,7 +111,7 @@
    "error": "no encontré el precio en la página"
   },
   "j4": {
-   "ok": true,
+   "ok": false,
    "price": 229990,
    "was": null,
    "last_ok": 1795104257379,
@@ -128,10 +128,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "s1": {
-   "ok": true,
+   "ok": false,
    "price": 60990,
    "was": 129990,
    "last_ok": 1795104262288,
@@ -154,10 +154,10 @@
     ],
     "t": 1795104262288
    },
-   "error": null
+   "error": "HTTP 403"
   },
   "s2": {
-   "ok": true,
+   "ok": false,
    "price": 29990,
    "was": 59990,
    "last_ok": 1795104265705,
@@ -180,10 +180,10 @@
     ],
     "t": 1795104265705
    },
-   "error": null
+   "error": "HTTP 403"
   },
   "s3": {
-   "ok": true,
+   "ok": false,
    "price": 94990,
    "was": 161990,
    "last_ok": 1795104270849,
@@ -195,16 +195,21 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "s4": {
    "ok": true,
    "price": 105990,
    "was": 161990,
-   "last_ok": 1795104275492,
+   "last_ok": 1795108433345,
    "history": [
     [
      1795065155720,
+     105990,
+     161990
+    ],
+    [
+     1795108433345,
      105990,
      161990
     ]
@@ -222,7 +227,7 @@
    "error": "HTTP 403"
   },
   "a1": {
-   "ok": true,
+   "ok": false,
    "price": 189990,
    "was": 359990,
    "last_ok": 1795104296650,
@@ -234,7 +239,7 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "a2": {
    "ok": false,
@@ -246,7 +251,7 @@
    "error": "HTTP 403"
   },
   "a3": {
-   "ok": true,
+   "ok": false,
    "price": 199990,
    "was": 219990,
    "last_ok": 1795104319048,
@@ -258,10 +263,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "n1": {
-   "ok": true,
+   "ok": false,
    "price": 269990,
    "was": null,
    "last_ok": 1795104324566,
@@ -273,10 +278,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "n2": {
-   "ok": true,
+   "ok": false,
    "price": 259990,
    "was": null,
    "last_ok": 1795104327905,
@@ -288,10 +293,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "n3": {
-   "ok": true,
+   "ok": false,
    "price": 755990,
    "was": null,
    "last_ok": 1795104330745,
@@ -303,10 +308,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "n4": {
-   "ok": true,
+   "ok": false,
    "price": 629990,
    "was": null,
    "last_ok": 1795104334676,
@@ -318,10 +323,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "n5": {
-   "ok": true,
+   "ok": false,
    "price": 793990,
    "was": null,
    "last_ok": 1795104338059,
@@ -333,7 +338,7 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   }
  }
 }
