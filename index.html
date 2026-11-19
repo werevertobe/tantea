@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tantea Audio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+:root{
+  --bg:#F4F6F4; --surface:#FFFFFF; --ink:#142019; --muted:#5B6B62; --line:#DCE3DE;
+  --accent:#0B7A63; --accent-ink:#FFFFFF; --down:#0B7A63; --down-bg:#DDF3EA; --up:#B4410F; --up-bg:#FBE6DA; --flat-bg:#E9EEEB; --star:#B7791F;
+  --font-display:'Space Grotesk',system-ui,sans-serif; --font-body:'Inter',system-ui,sans-serif; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0E1512; --surface:#16201B; --ink:#E6EEE9; --muted:#9AAEA3; --line:#26352D;
+  --accent:#3CCBA6; --accent-ink:#06231B; --down:#4FD9B3; --down-bg:#123A2E; --up:#FF9A66; --up-bg:#43230F; --flat-bg:#1F2C25; --star:#E9B949; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding:0 16px 48px}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a{color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto}
+header.top{display:flex;align-items:center;gap:8px;padding:16px 0;flex-wrap:wrap}
+.logo{font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-.02em;margin-right:auto}
+.btn{border:1px solid var(--line);background:var(--surface);padding:7px 13px;border-radius:8px;cursor:pointer;font-weight:500;text-decoration:none;color:var(--ink);display:inline-block;font-size:14px}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.notice{background:var(--flat-bg);border-radius:8px;padding:8px 12px;font-size:13px;color:var(--muted)}
+h2.sec{font-family:var(--font-display);font-size:20px;margin:28px 0 4px}
+.sub{color:var(--muted);font-size:13px;margin:0 0 12px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:18px 0 6px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.kpi b{font-family:var(--font-display);font-size:26px;display:block;line-height:1.2}
+.kpi span{font-size:12px;color:var(--muted)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card.hot{border-color:var(--accent);border-width:2px}
+.brand{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.card h3{margin:0;font-size:15px;font-weight:600;line-height:1.35}
+.card h3 a{color:var(--ink);text-underline-offset:3px}
+.card h3 a:hover{color:var(--accent)}
+.meta{font-size:12px;color:var(--muted)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.price{font-family:var(--font-display);font-weight:700;font-size:22px;font-variant-numeric:tabular-nums}
+.was{text-decoration:line-through;color:var(--muted);font-size:13px}
+.badge{font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.badge.down{background:var(--down-bg);color:var(--down)} .badge.up{background:var(--up-bg);color:var(--up)} .badge.flat{background:var(--flat-bg);color:var(--muted)}
+.star{background:none;border:0;cursor:pointer;font-size:18px;line-height:1;color:var(--muted);padding:0}
+.star[aria-pressed="true"]{color:var(--star)}
+.spark{width:100%;height:34px;display:block}
+.empty{padding:22px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;z-index:30;font-size:14px;max-width:90vw}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="logo">Tantea Audio</div>
+    <button class="btn" id="snd" aria-pressed="false">Sonido: apagado</button>
+    <button class="btn" id="ref">Actualizar ahora</button>
+  </header>
+  <div class="notice" id="notice">Cargando precios…</div>
+  <main id="main"></main>
+  <footer>Los precios son los publicados por cada tienda y cambian sin aviso. Confirma siempre en el enlace del producto antes de comprar. La página se actualiza sola cada hora.</footer>
+</div>
+
+<script>
+(function(){
+var BRANDS=['Bose','JBL','Soundcore','Apple','Sonos'], CATS=['Audífonos','Parlantes'];
+var $=function(s){return document.querySelector(s)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var fmt=function(n){return new Intl.NumberFormat('es-CL',{style:'currency',currency:'CLP',maximumFractionDigits:0}).format(n)};
+var fdate=function(t){return new Date(t).toLocaleString('es-CL',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})};
+var S={brand:'',stars:{b1:1,j4:1,s1:1},sound:false,seen:{}};
+try{var st=JSON.parse(localStorage.getItem('tantea-audio-ui')||'{}');if(st.stars)S.stars=st.stars;if(st.seen)S.seen=st.seen;S.sound=!!st.sound}catch(e){}
+function save(){try{localStorage.setItem('tantea-audio-ui',JSON.stringify({stars:S.stars,seen:S.seen,sound:S.sound}))}catch(e){}}
+function toast(m){var t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);setTimeout(function(){t.remove()},4500)}
+
+var P=[],DATA={products:{},updated:0},ctx=null;
+
+/* Campana: tres tonos con caída suave, generados en el navegador (sin archivos de audio) */
+function bell(){
+  if(!S.sound)return;
+  try{
+    ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();
+    if(ctx.state==='suspended')ctx.resume();
+    [0,0.9].forEach(function(off){
+      [[880,0.5],[2217,0.22],[3520,0.1]].forEach(function(p){
+        var o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime+off;
+        o.type='sine';o.frequency.value=p[0];
+        g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(p[1],t+0.01);g.gain.exponentialRampToValueAtTime(0.0001,t+1.6);
+        o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+1.7);
+      });
+    });
+  }catch(e){}
+}
+function sndLabel(){var b=$('#snd');b.textContent='Sonido: '+(S.sound?'encendido':'apagado');b.setAttribute('aria-pressed',S.sound)}
+$('#snd').onclick=function(){S.sound=!S.sound;save();sndLabel();if(S.sound)bell()};
+sndLabel();
+
+function info(p){var r=DATA.products[p.id]||{};var h=r.history||[];
+  var disc=r.price&&r.was&&r.was>r.price?(r.was-r.price)/r.was:0;
+  var prev=h.length>1?h[h.length-2][1]:null, chg=r.price&&prev?(r.price-prev)/prev:0;
+  return{r:r,h:h,has:!!r.price,disc:disc,chg:chg,alert:r.alert}}
+function spark(h){if(h.length<2)return '';var v=h.map(function(x){return x[1]}),mn=Math.min.apply(0,v),mx=Math.max.apply(0,v),sp=mx-mn||1;
+  var pts=v.map(function(y,k){return (k/(v.length-1)*200).toFixed(1)+','+(30-((y-mn)/sp)*26).toFixed(1)}).join(' ');
+  return '<svg class="spark" viewBox="0 0 200 34" preserveAspectRatio="none" role="img" aria-label="Evolución del precio"><polyline points="'+pts+'" fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>'}
+function card(p){var i=info(p),r=i.r;
+  return '<article class="card'+(i.alert?' hot':'')+'"><div class="row"><span class="brand">'+p.brand+' · '+p.store+'</span><button class="star" data-star="'+p.id+'" aria-pressed="'+!!S.stars[p.id]+'" aria-label="Destacar">★</button></div>'+
+  '<h3><a href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+esc(p.name)+'</a></h3>'+
+  (i.has?'<div class="row"><span class="price">'+fmt(r.price)+'</span>'+(i.disc?'<span class="badge down">−'+Math.round(i.disc*100)+'%</span>':'')+'</div>'+
+    '<div class="meta">'+(r.was?'<span class="was">'+fmt(r.was)+'</span> · ':'')+'revisado '+fdate(r.last_ok)+(i.chg?' · <span class="badge '+(i.chg<0?'down':'up')+'">'+(i.chg<0?'−':'+')+Math.abs(Math.round(i.chg*100))+'% vs revisión anterior</span>':'')+'</div>'+spark(i.h)
+   :'<div class="meta">Sin precio todavía'+(r.error?' ('+esc(r.error)+')':'')+'. Abre la tienda para verlo.</div>')+
+  (i.alert?'<div class="badge down" style="align-self:flex-start">Alerta: '+esc(i.alert.reasons.join(' · '))+'</div>':'')+
+  '<a class="btn primary" style="margin-top:auto;text-align:center" href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">Ver precio en '+p.store+'</a></article>'}
+function grid(l){return l.length?'<div class="grid">'+l.map(card).join('')+'</div>':''}
+
+function render(){
+  var l=P.filter(function(p){return !S.brand||p.brand===S.brand}), inf=l.map(function(p){return{p:p,i:info(p)}});
+  var priced=inf.filter(function(x){return x.i.has});
+  var opp=inf.filter(function(x){return x.i.alert}).sort(function(a,b){return b.i.disc-a.i.disc});
+  var top=priced.filter(function(x){return x.i.disc>0}).sort(function(a,b){return b.i.disc-a.i.disc}).slice(0,3);
+  var feat=l.filter(function(p){return S.stars[p.id]}), best=top[0];
+  $('#notice').textContent=DATA.updated?'Última revisión de las tiendas: '+fdate(DATA.updated)+'. Próxima actualización de esta página en menos de 1 hora.':'Aún sin revisiones.';
+  $('#main').innerHTML=
+  '<div class="filters"><button class="chip" data-brand="" aria-pressed="'+(S.brand==='')+'">Todas las marcas</button>'+BRANDS.map(function(b){return '<button class="chip" data-brand="'+b+'" aria-pressed="'+(S.brand===b)+'">'+b+'</button>'}).join('')+'</div>'+
+  '<div class="kpis"><div class="kpi"><b>'+l.length+'</b><span>productos seguidos</span></div><div class="kpi"><b>'+priced.length+'</b><span>con precio leído</span></div>'+
+  '<div class="kpi"><b>'+(best?'−'+Math.round(best.i.disc*100)+'%':'—')+'</b><span>'+(best?esc(best.p.name):'mayor descuento')+'</span></div><div class="kpi"><b>'+opp.length+'</b><span>alertas activas</span></div></div>'+
+  '<h2 class="sec">Alertas activas</h2><p class="sub">Descuentos fuertes, bajas bruscas o metas alcanzadas.</p>'+(opp.length?grid(opp.map(function(x){return x.p})):'<div class="empty">Sin alertas por ahora.</div>')+
+  '<h2 class="sec">Mayor descuento</h2><p class="sub">Los tres productos con más rebaja sobre su precio normal.</p>'+(top.length?grid(top.map(function(x){return x.p})):'<div class="empty">Aún no hay descuentos.</div>')+
+  '<h2 class="sec">Destacados</h2><p class="sub">Marca la estrella de cualquier tarjeta para verla aquí.</p>'+(feat.length?grid(feat):'<div class="empty">Sin destacados.</div>')+
+  CATS.map(function(c){var ps=l.filter(function(p){return p.cat===c});return ps.length?'<h2 class="sec">'+c+'</h2><p class="sub">'+ps.length+' productos</p>'+grid(ps):''}).join('');
+  document.querySelectorAll('[data-brand]').forEach(function(b){b.onclick=function(){S.brand=b.dataset.brand;render()}});
+  document.querySelectorAll('[data-star]').forEach(function(b){b.onclick=function(){var id=b.dataset.star;if(S.stars[id])delete S.stars[id];else S.stars[id]=1;save();render()}});
+}
+
+function checkAlerts(){
+  var fresh=[];
+  P.forEach(function(p){var a=(DATA.products[p.id]||{}).alert;if(!a)return;var k=p.id+':'+a.t;if(!S.seen[k]){S.seen[k]=1;fresh.push(p.name+' a '+fmt(a.price))}});
+  if(fresh.length){save();toast('🔔 '+fresh.join(' | '));bell()}
+}
+function load(){
+  return Promise.all([fetch('products.json',{cache:'no-store'}).then(function(r){return r.json()}),fetch('data/prices.json',{cache:'no-store'}).then(function(r){return r.json()})])
+   .then(function(res){P=res[0];DATA=res[1];render();checkAlerts()})
+   .catch(function(){$('#notice').textContent='No pude cargar los datos. Reintento en un minuto.';setTimeout(load,60000)});
+}
+$('#ref').onclick=function(){load().then(function(){toast('Datos actualizados')})};
+setInterval(load,3600000);
+document.addEventListener('visibilitychange',function(){if(!document.hidden&&Date.now()-DATA.updated>3600000)load()});
+load();
+})();
+</script>
+</body>
+</html>

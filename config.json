@@ -1,0 +1,9 @@
+{
+  "discount_alert_pct": 50,
+  "drop_vs_median_pct": 20,
+  "min_samples_for_median": 3,
+  "targets": {
+    "b1": 400000,
+    "j4": 110000
+  }
+}

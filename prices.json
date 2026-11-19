@@ -1,0 +1,225 @@
+{
+ "updated": 1795053600000,
+ "health_alerted": false,
+ "products": {
+  "b1": {
+   "ok": true,
+   "price": 459990,
+   "was": 779990,
+   "last_ok": 1795053600000,
+   "history": [
+    [
+     1795053600000,
+     459990,
+     779990
+    ]
+   ],
+   "alert": null
+  },
+  "b2": {
+   "ok": true,
+   "price": 626990,
+   "was": 845990,
+   "last_ok": 1795053600000,
+   "history": [
+    [
+     1795053600000,
+     626990,
+     845990
+    ]
+   ],
+   "alert": null
+  },
+  "b3": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "b4": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "j1": {
+   "ok": true,
+   "price": 145990,
+   "was": 159990,
+   "last_ok": 1795053600000,
+   "history": [
+    [
+     1795053600000,
+     145990,
+     159990
+    ]
+   ],
+   "alert": null
+  },
+  "j2": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "j3": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "j4": {
+   "ok": true,
+   "price": 129990,
+   "was": 229990,
+   "last_ok": 1795053600000,
+   "history": [
+    [
+     1795053600000,
+     129990,
+     229990
+    ]
+   ],
+   "alert": null
+  },
+  "s1": {
+   "ok": true,
+   "price": 60990,
+   "was": 129990,
+   "last_ok": 1795053600000,
+   "history": [
+    [
+     1795053600000,
+     60990,
+     129990
+    ]
+   ],
+   "alert": null
+  },
+  "s2": {
+   "ok": true,
+   "price": 31990,
+   "was": 59990,
+   "last_ok": 1795053600000,
+   "history": [
+    [
+     1795053600000,
+     31990,
+     59990
+    ]
+   ],
+   "alert": null
+  },
+  "s3": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "s4": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "s5": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "a1": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "a2": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "a3": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "n1": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "n2": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "n3": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "n4": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  },
+  "n5": {
+   "ok": false,
+   "price": null,
+   "was": null,
+   "last_ok": null,
+   "history": [],
+   "alert": null,
+   "error": "aún no revisado"
+  }
+ }
+}
