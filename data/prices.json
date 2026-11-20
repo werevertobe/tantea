@@ -1,5 +1,5 @@
 {
- "updated": 1795143518410,
+ "updated": 1795147321401,
  "health_alerted": true,
  "products": {
   "b1": {
@@ -26,7 +26,7 @@
    "ok": true,
    "price": 516990,
    "was": 697990,
-   "last_ok": 1795143242468,
+   "last_ok": 1795147001883,
    "history": [
     [
      1795053600000,
@@ -72,7 +72,7 @@
    "error": "HTTP 403"
   },
   "j1": {
-   "ok": true,
+   "ok": false,
    "price": 159990,
    "was": null,
    "last_ok": 1795143283749,
@@ -94,10 +94,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "j2": {
-   "ok": true,
+   "ok": false,
    "price": 179990,
    "was": null,
    "last_ok": 1795143287876,
@@ -114,7 +114,7 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "j3": {
    "ok": false,
@@ -216,7 +216,7 @@
    "ok": true,
    "price": 105990,
    "was": 161990,
-   "last_ok": 1795143364130,
+   "last_ok": 1795147152308,
    "history": [
     [
      1795065155720,
@@ -326,7 +326,7 @@
    "error": "HTTP 403"
   },
   "n4": {
-   "ok": true,
+   "ok": false,
    "price": 629990,
    "was": null,
    "last_ok": 1795143495363,
@@ -343,7 +343,7 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "n5": {
    "ok": false,
