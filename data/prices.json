@@ -1,5 +1,5 @@
 {
- "updated": 1795384319333,
+ "updated": 1795388000245,
  "health_alerted": true,
  "products": {
   "b1": {
@@ -36,7 +36,7 @@
    "ok": true,
    "price": 516990,
    "was": 697990,
-   "last_ok": 1795383999545,
+   "last_ok": 1795387679013,
    "history": [
     [
      1795053600000,
@@ -154,7 +154,7 @@
     ]
    ],
    "alert": null,
-   "error": "HTTP 403"
+   "error": "HTTP 405"
   },
   "j2": {
    "ok": false,
@@ -189,7 +189,7 @@
     ]
    ],
    "alert": null,
-   "error": "HTTP 403"
+   "error": "HTTP 405"
   },
   "j3": {
    "ok": false,
@@ -331,7 +331,7 @@
    "ok": true,
    "price": 105990,
    "was": 161990,
-   "last_ok": 1795384151208,
+   "last_ok": 1795387830519,
    "history": [
     [
      1795065155720,
@@ -553,7 +553,7 @@
     ]
    ],
    "alert": null,
-   "error": "HTTP 403"
+   "error": "HTTP 405"
   },
   "n5": {
    "ok": false,
