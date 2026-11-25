@@ -1,5 +1,5 @@
 {
- "updated": 1795626903575,
+ "updated": 1795633284119,
  "health_alerted": true,
  "products": {
   "b1": {
@@ -48,7 +48,7 @@
    "error": "HTTP 403"
   },
   "b2": {
-   "ok": true,
+   "ok": false,
    "price": 532990,
    "was": 719990,
    "last_ok": 1795626585413,
@@ -125,7 +125,7 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "no encontré el precio en la página"
   },
   "b3": {
    "ok": false,
@@ -500,7 +500,7 @@
    "error": "HTTP 403"
   },
   "s4": {
-   "ok": true,
+   "ok": false,
    "price": 105990,
    "was": 161990,
    "last_ok": 1795626737072,
@@ -572,7 +572,7 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "no encontré el precio en la página"
   },
   "s5": {
    "ok": false,
