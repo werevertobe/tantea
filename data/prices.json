@@ -1,5 +1,5 @@
 {
- "updated": 1795695063611,
+ "updated": 1795700020896,
  "health_alerted": true,
  "products": {
   "b1": {
@@ -62,7 +62,7 @@
    "ok": true,
    "price": 532990,
    "was": 719990,
-   "last_ok": 1795694744534,
+   "last_ok": 1795699704870,
    "history": [
     [
      1795053600000,
@@ -559,7 +559,7 @@
    "ok": true,
    "price": 133990,
    "was": null,
-   "last_ok": 1795694895407,
+   "last_ok": 1795699855142,
    "history": [
     [
      1795065155720,
