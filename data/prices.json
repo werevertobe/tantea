@@ -1,5 +1,5 @@
 {
- "updated": 1795710016134,
+ "updated": 1795716250630,
  "health_alerted": true,
  "products": {
   "b1": {
@@ -62,7 +62,7 @@
    "ok": true,
    "price": 532990,
    "was": 719990,
-   "last_ok": 1795709695369,
+   "last_ok": 1795715931156,
    "history": [
     [
      1795053600000,
@@ -270,7 +270,7 @@
     ]
    ],
    "alert": null,
-   "error": "HTTP 403"
+   "error": "HTTP 405"
   },
   "j2": {
    "ok": false,
@@ -335,7 +335,7 @@
     ]
    ],
    "alert": null,
-   "error": "HTTP 403"
+   "error": "HTTP 405"
   },
   "j3": {
    "ok": false,
@@ -557,9 +557,9 @@
   },
   "s4": {
    "ok": true,
-   "price": 133990,
-   "was": null,
-   "last_ok": 1795709848212,
+   "price": 44990,
+   "was": 161990,
+   "last_ok": 1795716083150,
    "history": [
     [
      1795065155720,
@@ -640,9 +640,22 @@
      1795677979063,
      133990,
      null
+    ],
+    [
+     1795716083150,
+     44990,
+     161990
     ]
    ],
-   "alert": null,
+   "alert": {
+    "price": 44990,
+    "reasons": [
+     "72% bajo su precio normal ($161.990)",
+     "58% bajo su precio típico de 14 días ($105.990)",
+     "mínimo histórico registrado"
+    ],
+    "t": 1795716083150
+   },
    "error": null
   },
   "s5": {
@@ -951,7 +964,7 @@
     ]
    ],
    "alert": null,
-   "error": "HTTP 403"
+   "error": "HTTP 405"
   },
   "n5": {
    "ok": false,
