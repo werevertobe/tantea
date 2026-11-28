@@ -1,9 +1,9 @@
 {
- "updated": 1795863417654,
- "health_alerted": false,
+ "updated": 1795867129883,
+ "health_alerted": true,
  "products": {
   "b1": {
-   "ok": true,
+   "ok": false,
    "price": 409990,
    "was": 779990,
    "last_ok": 1795863294897,
@@ -60,13 +60,13 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "b2": {
    "ok": true,
    "price": 545990,
    "was": 736990,
-   "last_ok": 1795863298778,
+   "last_ok": 1795866813255,
    "history": [
     [
      1795053600000,
@@ -173,7 +173,7 @@
    "error": null
   },
   "b3": {
-   "ok": true,
+   "ok": false,
    "price": 249990,
    "was": 399990,
    "last_ok": 1795863304233,
@@ -225,7 +225,7 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "b4": {
    "ok": false,
@@ -237,7 +237,7 @@
    "error": "HTTP 403"
   },
   "j1": {
-   "ok": true,
+   "ok": false,
    "price": 159990,
    "was": null,
    "last_ok": 1795863326127,
@@ -314,10 +314,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "j2": {
-   "ok": true,
+   "ok": false,
    "price": 179990,
    "was": null,
    "last_ok": 1795863329866,
@@ -389,7 +389,7 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "j3": {
    "ok": false,
@@ -401,7 +401,7 @@
    "error": "no encontré el precio en la página"
   },
   "j4": {
-   "ok": true,
+   "ok": false,
    "price": 229990,
    "was": null,
    "last_ok": 1795863335515,
@@ -458,10 +458,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "s1": {
-   "ok": true,
+   "ok": false,
    "price": 52990,
    "was": 129990,
    "last_ok": 1795863339628,
@@ -525,10 +525,10 @@
     ],
     "t": 1795482789088
    },
-   "error": null
+   "error": "HTTP 403"
   },
   "s2": {
-   "ok": true,
+   "ok": false,
    "price": 25990,
    "was": 59990,
    "last_ok": 1795863342545,
@@ -592,10 +592,10 @@
     ],
     "t": 1795482795042
    },
-   "error": null
+   "error": "HTTP 403"
   },
   "s3": {
-   "ok": true,
+   "ok": false,
    "price": 161990,
    "was": null,
    "last_ok": 1795863346387,
@@ -647,13 +647,13 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "s4": {
    "ok": true,
    "price": 44990,
    "was": 161990,
-   "last_ok": 1795863350442,
+   "last_ok": 1795866963236,
    "history": [
     [
      1795065155720,
@@ -777,7 +777,7 @@
    "error": "HTTP 403"
   },
   "a1": {
-   "ok": true,
+   "ok": false,
    "price": 189990,
    "was": 359990,
    "last_ok": 1795863373265,
@@ -829,7 +829,7 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "a2": {
    "ok": false,
@@ -841,7 +841,7 @@
    "error": "HTTP 403"
   },
   "a3": {
-   "ok": true,
+   "ok": false,
    "price": 199990,
    "was": 219990,
    "last_ok": 1795863395407,
@@ -893,10 +893,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "n1": {
-   "ok": true,
+   "ok": false,
    "price": 224990,
    "was": 269990,
    "last_ok": 1795863400672,
@@ -948,10 +948,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "n2": {
-   "ok": true,
+   "ok": false,
    "price": 164990,
    "was": 259990,
    "last_ok": 1795863405257,
@@ -1010,10 +1010,10 @@
     ],
     "t": 1795742703489
    },
-   "error": null
+   "error": "HTTP 403"
   },
   "n3": {
-   "ok": true,
+   "ok": false,
    "price": 469990,
    "was": 755990,
    "last_ok": 1795863409520,
@@ -1072,10 +1072,10 @@
     ],
     "t": 1795742708325
    },
-   "error": null
+   "error": "HTTP 403"
   },
   "n4": {
-   "ok": true,
+   "ok": false,
    "price": 629990,
    "was": null,
    "last_ok": 1795863414694,
@@ -1147,10 +1147,10 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   },
   "n5": {
-   "ok": true,
+   "ok": false,
    "price": 793990,
    "was": null,
    "last_ok": 1795863417654,
@@ -1202,7 +1202,7 @@
     ]
    ],
    "alert": null,
-   "error": null
+   "error": "HTTP 403"
   }
  }
 }
